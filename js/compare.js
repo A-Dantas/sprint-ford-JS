@@ -59,9 +59,9 @@ function SetCarToCompare(el, carClass) {
     } else {
       if (!el.checked) {
         if (GetCarArrPosition(carArr, carClass) === 1) {
-          let itemRemovido = carArr.splice(1, 1);
+          carArr.splice(1, 1);
         } else {
-          let itemRemovidoShift = carArr.splice(0, 1);
+          carArr.splice(0, 1);
         }
       }
 
