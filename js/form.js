@@ -5,11 +5,13 @@ let dadosDoCliente = [];
 
 class contato {
     
-    constructor (nome, email, telefone, contato) {
+    constructor (nome, sobrenome, cpf, email, telefone, meioContato) {
         this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
-        this.contato = contato;
+        this.meioContato = meioContato;
     }
 }
 
@@ -24,11 +26,11 @@ form.addEventListener('submit', function(event) {
 function Post(form) {
 
   let data = new contato(form.elements.namedItem("nome").value,
+    form.elements.namedItem("sobrenome").value, 
+    form.elements.namedItem("cpf").value, 
     form.elements.namedItem("email").value, 
     form.elements.namedItem("telefone").value, 
-    form.elements.namedItem("contato").value);
-    // form.elements.namedItem("cpf").value, 
-    //form.elements.namedItem("sobrenome").value, 
+    form.elements.namedItem("meioContato").value);
     
     dadosDoCliente.push(data)
     
